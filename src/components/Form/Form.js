@@ -13,9 +13,12 @@ const Form = () => {
         {
             id: "PLATFORM",
             value: "",
-            label: "PLATFORM"
+            label: "PLATFORM",
+            filter: filterGamesByPlatform
         }
     ]);
+
+    
 
     const onInputChange = (event) => {
        let copy = [...inputs]
@@ -30,7 +33,7 @@ const Form = () => {
     const inputsToBeRendered = inputs.map(objectFromStateArray => {
        return <div>
         <label htmlFor={objectFromStateArray.id}>{objectFromStateArray.label}</label>
-        <input onChange={onInputChange} id={objectFromStateArray.id} type="text" value={objectFromStateArray.value} />
+        <input  onChange={onInputChange} id={objectFromStateArray.id} type="text" value={objectFromStateArray.value} />
     </div>
     })
 
@@ -42,7 +45,9 @@ const Form = () => {
 
     const submit = (event) => {
         event.preventDefault()
-            console.log(filterGamesByPlatform("WII"))
+     inputs.forEach(input => {
+        console.log(input.filter(input.value))
+     })
     }
 
     return(
