@@ -1,0 +1,58 @@
+.form{
+
+         width: 40rem;
+         background-color: #eee;
+         aspect-ratio: 16/9;
+         padding: 4rem;
+         display: flex;
+         flex-direction: column;
+         gap: 2rem;
+         justify-content: space-between;
+         border-radius: 0.3rem;
+         box-shadow: 0 1rem 2rem 0 rgb(0, 0, 0, 0.3),
+         inset 0 -0.5rem 0.5rem 0 #004e92;
+         background: linear-gradient(to bottom, #eee, hsl(0, 0%, 83%))
+         
+}
+
+.form__inputsWrapper{
+         display: flex;
+         flex-direction: column;
+         gap: 4rem;
+}
+
+.form__wrapper{
+         display: flex;
+         flex-direction: column;
+         gap: 0.5rem;
+}
+
+.form__search{
+         background-color: #000;
+         color: #eee;
+         font-family: inherit;
+         font-size: 90%;
+         border: none;
+         width: min-content;
+         padding: 1rem;
+         border-radius: 0.5rem;
+         aspect-ratio: 3/1;
+}
+
+.form__search:hover{
+         cursor: pointer;
+}
+
+.form__label{
+         font-size: 160%;
+}
+
+.form__input{
+         border: none;
+         background: none;
+         outline: none;
+         border-bottom: 0.3rem solid #004e92; 
+         font-size: 100%;
+         
+}
+

@@ -1,7 +1,8 @@
-import {games} from "../data/games"
 
- export const filterGamesByTitle = (nameToBeSearched) => {
-    return games.filter(game => {
+
+ export const filterGamesByTitle = (nameToBeSearched, toBeSearchedArray) => {
+    console.log('Title: ', toBeSearchedArray)
+    return toBeSearchedArray.filter(game => {
 
         if(game.title.toUpperCase().indexOf(nameToBeSearched.toUpperCase()) !== -1 ){
             return game
@@ -9,12 +10,24 @@ import {games} from "../data/games"
         
     })
 }
+export const filterGamesByType = (typeToBeSearched, toBeSearchedArray) => {
+    console.log('Type: ', toBeSearchedArray)
+    
+    return toBeSearchedArray.filter(game => {
 
-export const filterGamesByPlatform = (platformToBeSearched) => {
-    return games.filter(game => {
+        if(game.title.toUpperCase().indexOf(typeToBeSearched.toUpperCase()) !== -1 ){
+            return game
+        }
+        
+    })
+ }
+
+export const filterGamesByPlatform = (platformToBeSearched, toBeSearchedArray) => {
+    console.log('Platform: ', toBeSearchedArray)
+    return toBeSearchedArray.filter(game => {
        let found = false;
        game.platforms.forEach(platform => {
-        if(platform === platformToBeSearched){
+        if(platform.toUpperCase() === platformToBeSearched.toUpperCase()){
             found = true
         }
        })
